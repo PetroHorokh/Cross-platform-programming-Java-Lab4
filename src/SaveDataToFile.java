@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
-public class SavePaymentsToFile implements Process {
+public class SaveDataToFile implements Process {
     @Override
     public void execute(Scanner scanner, List<Payment> payments) {
         String filename = "payments.txt";

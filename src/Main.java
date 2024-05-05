@@ -68,16 +68,14 @@ public class Main {
                     executor.executeOperation(scanner, payments);
                     break;
                 case 10:
-                    executor = new ProcessExecutor(new GetPaymentsFromFile());
+                    executor = new ProcessExecutor(new LoadDataFromFile());
                     executor.executeOperation(scanner, payments);
                     break;
                 case 11:
-                    executor = new ProcessExecutor(new SavePaymentsToFile());
+                    executor = new ProcessExecutor(new SaveDataToFile());
                     executor.executeOperation(scanner, payments);
                     break;
                 case 12:
-                    executor = new ProcessExecutor(new SavePaymentsToFile());
-                    executor.executeOperation(scanner, payments);
                     executor = new ProcessExecutor(new EndProcess());
                     executor.executeOperation(scanner, payments);
                     break;

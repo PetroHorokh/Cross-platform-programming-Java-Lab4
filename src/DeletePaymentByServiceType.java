@@ -9,9 +9,9 @@ public class DeletePaymentByServiceType implements Process {
 
         boolean found = false;
 
-        for (var obj : payments) {
-            if (obj.getServiceType().equals(serviceType)) {
-                payments.remove(obj);
+        for(int i = 0; i < payments.size(); i++){
+            if (payments.get(i).getServiceType().equals(serviceType)) {
+                payments.remove(payments.get(i));
                 found = true;
             }
         }

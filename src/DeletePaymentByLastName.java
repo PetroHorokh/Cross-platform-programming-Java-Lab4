@@ -4,20 +4,27 @@ import java.util.Scanner;
 public class DeletePaymentByLastName implements Process {
     @Override
     public void execute(Scanner scanner, List<Payment> payments) {
-        System.out.println("Введіть прізвище, за яким потрібно видалити оплати:");
-        String lastName = scanner.nextLine();
 
-        boolean found = false;
+        try {
+            System.out.println("Введіть прізвище, за яким потрібно видалити оплати:");
+            String lastName = scanner.nextLine();
 
-        for (var obj : payments) {
-            if (obj.getLastName().equals(lastName)) {
-                payments.remove(obj);
-                found = true;
+            boolean found = false;
+
+            for(int i = 0; i < payments.size(); i++){
+                if (payments.get(i).getLastName().equals(lastName)) {
+                    payments.remove(payments.get(i));
+                    found = true;
+                }
             }
+
+            if(!found){
+                System.out.println("Не було знайдено оплат з заданим прізвищем");
+            }
+        }catch (Exception ex){
+            System.err.println(ex.toString());
         }
 
-        if(!found){
-            System.out.println("Не було знайдено оплат з заданим прізвищем");
-        }
+
     }
 }

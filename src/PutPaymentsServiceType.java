@@ -12,9 +12,9 @@ public class PutPaymentsServiceType implements Process {
 
         boolean found = false;
 
-        for (var obj : payments) {
-            if (obj.getServiceType().equals(serviceTypeToChange)) {
-                obj.setServiceType(serviceTypeChange);
+        for(int i = 0; i < payments.size(); i++){
+            if (payments.get(i).getServiceType().equals(serviceTypeToChange)) {
+                payments.get(i).setServiceType(serviceTypeChange);
                 found = true;
             }
         }

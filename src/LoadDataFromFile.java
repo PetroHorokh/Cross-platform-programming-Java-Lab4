@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
-public class GetPaymentsFromFile implements Process {
+public class LoadDataFromFile implements Process {
     @Override
     public void execute(Scanner scanner, List<Payment> payments) {
         payments.clear();
