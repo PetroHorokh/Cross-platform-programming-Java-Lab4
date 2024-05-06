@@ -20,6 +20,6 @@ public class Payment {
 
     @Override
     public String toString() {
-        return lastName + ", " + address + ", " + serviceType + ", " + paymentDate + ", " + amount;
+        return getLastName() + ", " + getAddress() + ", " + getServiceType() + ", " + getPaymentDate() + ", " + getAmount();
     }
 }

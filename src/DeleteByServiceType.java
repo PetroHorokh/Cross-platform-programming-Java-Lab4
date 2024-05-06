@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.Scanner;
 
-public class DeletePaymentByServiceType implements Process {
+public class DeleteByServiceType implements Process {
     @Override
     public void execute(Scanner scanner, List<Payment> payments) {
         System.out.println("Введіть тип послуги, за яким потрібно видалити оплати:");

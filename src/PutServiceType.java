@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.Scanner;
 
-public class PutPaymentsServiceType implements Process {
+public class PutServiceType implements Process {
     @Override
     public void execute(Scanner scanner, List<Payment> payments) {
         System.out.println("Введіть тип послуг, який потрібно замінити в оплатах:");

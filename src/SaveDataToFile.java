@@ -13,18 +13,14 @@ public class SaveDataToFile implements Process {
             BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
 
             for (Payment payment : payments) {
-                writer.write(payment.getLastName() + ", " +
-                        payment.getAddress() + ", " +
-                        payment.getServiceType() + ", " +
-                        payment.getPaymentDate() + ", " +
-                        payment.getAmount());
+                writer.write(payment.toString());
                 writer.newLine();
             }
 
             writer.close();
             System.out.println("Дані збережені у файл " + filename);
         } catch (IOException e) {
-            System.err.println("Виникла помилка при записі даних про оплати у файл " + filename);
+            System.err.println("Виникла помилка при записі даних у файл " + filename);
         }
     }
 }

@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.Scanner;
 
-public class GetPaymentByLastName implements Process {
+public class GetByLastName implements Process {
     @Override
     public void execute(Scanner scanner, List<Payment> payments) {
         System.out.println("Введіть прізвище для пошуку оплат:");

@@ -13,20 +13,20 @@ public class LoadDataFromFile implements Process {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(", ");
-                if (parts.length == 5) {
-                    String lastName = parts[0];
-                    String address = parts[1];
-                    String serviceType = parts[2];
-                    String paymentDate = parts[3];
-                    double amount = Double.parseDouble(parts[4]);
 
-                    Payment payment = new Payment(lastName, address, serviceType, paymentDate, amount);
-                    payments.add(payment);
-                }
+                String lastName = parts[0];
+                String address = parts[1];
+                String serviceType = parts[2];
+                String paymentDate = parts[3];
+                double amount = Double.parseDouble(parts[4]);
+
+                Payment payment = new Payment(lastName, address, serviceType, paymentDate, amount);
+                payments.add(payment);
+
             }
-            System.out.println("Дані про оплати було завантажено з файлу");
+            System.out.println("Дані було завантажено з файлу");
         } catch (IOException e) {
-            System.err.println("Виникла помилка при зчитувані даних про оплати з файлу " + filename);
+            System.err.println("Виникла помилка при читанні даних з файлу " + filename);
         }
     }
 }   

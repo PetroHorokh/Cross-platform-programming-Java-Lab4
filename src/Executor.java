@@ -1,10 +1,10 @@
 import java.util.List;
 import java.util.Scanner;
 
-public class ProcessExecutor {
+public class Executor {
     private final Process operation;
 
-    public ProcessExecutor(Process operation) {
+    public Executor(Process operation) {
         this.operation = operation;
     }
 

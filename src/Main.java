@@ -8,7 +8,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         List<Payment> payments = new ArrayList<>();
 
-        var executor = new ProcessExecutor(new StartProcess());
+        var executor = new Executor(new LoadDataFromFile());
         executor.executeOperation(scanner, payments);
 
         while (true) {
@@ -32,52 +32,53 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    executor = new ProcessExecutor(new GetAllPayments());
+                    executor = new Executor(new GetAll());
                     executor.executeOperation(scanner, payments);
                     break;
                 case 2:
-                    executor = new ProcessExecutor(new GetPaymentByAddress());
+                    executor = new Executor(new GetByAddress());
                     executor.executeOperation(scanner, payments);
                     break;
                 case 3:
-                    executor = new ProcessExecutor(new GetPaymentsByServiceType());
+                    executor = new Executor(new GetByServiceType());
                     executor.executeOperation(scanner, payments);
                     break;
                 case 4:
-                    executor = new ProcessExecutor(new GetPaymentByLastName());
+                    executor = new Executor(new GetByLastName());
                     executor.executeOperation(scanner, payments);
                     break;
                 case 5:
-                    executor = new ProcessExecutor(new PostPayment());
+                    executor = new Executor(new Post());
                     executor.executeOperation(scanner, payments);
                     break;
                 case 6:
-                    executor = new ProcessExecutor(new PutPaymentsServiceType());
+                    executor = new Executor(new PutServiceType());
                     executor.executeOperation(scanner, payments);
                     break;
                 case 7:
-                    executor = new ProcessExecutor(new DeletePaymentByLastName());
+                    executor = new Executor(new DeleteByLastName());
                     executor.executeOperation(scanner, payments);
                     break;
                 case 8:
-                    executor = new ProcessExecutor(new DeletePaymentByServiceType());
+                    executor = new Executor(new DeleteByServiceType());
                     executor.executeOperation(scanner, payments);
                     break;
                 case 9:
-                    executor = new ProcessExecutor(new GetSummary());
+                    executor = new Executor(new GetSummary());
                     executor.executeOperation(scanner, payments);
                     break;
                 case 10:
-                    executor = new ProcessExecutor(new LoadDataFromFile());
+                    executor = new Executor(new LoadDataFromFile());
                     executor.executeOperation(scanner, payments);
                     break;
                 case 11:
-                    executor = new ProcessExecutor(new SaveDataToFile());
+                    executor = new Executor(new SaveDataToFile());
                     executor.executeOperation(scanner, payments);
                     break;
                 case 12:
-                    executor = new ProcessExecutor(new EndProcess());
+                    executor = new Executor(new SaveDataToFile());
                     executor.executeOperation(scanner, payments);
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Некоректний вибір. Спробуйте знову.");

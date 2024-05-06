@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.Scanner;
 
-public class GetAllPayments implements Process {
+public class GetAll implements Process {
     @Override
     public void execute(Scanner scanner, List<Payment> payments) {
         System.out.println("Дані про оплати:");

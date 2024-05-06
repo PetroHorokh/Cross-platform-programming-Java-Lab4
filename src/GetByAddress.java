@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.Scanner;
 
-public class GetPaymentByAddress implements Process {
+public class GetByAddress implements Process {
     @Override
     public void execute(Scanner scanner, List<Payment> payments) {
         System.out.println("Введіть адресу для пошуку оплат:");
